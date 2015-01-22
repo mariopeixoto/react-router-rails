@@ -14,6 +14,7 @@
   
   ```bash
   bundle install
+  ```
 
 2. Require the modified React-Router javascript file in `app/assets/javascripts/application.js`:
 
