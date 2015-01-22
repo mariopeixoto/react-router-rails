@@ -20,12 +20,30 @@
 
   ```js
   //= require react_router
+  // OR
+  //= require react_router.min
   ```
   
   Or in `app/assets/javascripts/application.js.coffee`:
   
   ```coffeescript
   #= require react_router
+  #OR
+  #= require react_router.min
+  ```
+
+3. Using React Router:
+
+  ```js
+  ReactRouter.run(routes, function (Handler) {
+    React.render(<Handler/>, document.body);
+  });
+  ```
+
+  ```coffeescript
+  ReactRouter.run(routes, (Handler) ->
+    React.render <Handler/>, document.body
+  )
   ```
 
 ## Acknowledgements
