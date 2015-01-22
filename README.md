@@ -1,31 +1,34 @@
-# React::Router::Rails
+# react-router-rails
 
-TODO: Write a gem description
+[React Router](https://github.com/rackt/react-router/) for Rails asset pipeline
+
+- React Router version: [0.11.6](https://github.com/rackt/react-router/tree/v0.11.6)
 
 ## Installation
 
-Add this line to your application's Gemfile:
+1. Add to your `Gemfile` and install with bundler:
 
-```ruby
-gem 'react-router-rails'
-```
+  ```ruby
+  gem 'react-router-rails', '~>0.11.6'
+  ```
+  
+  ```bash
+  bundle install
 
-And then execute:
+2. Require the modified React-Router javascript file in `app/assets/javascripts/application.js`:
 
-    $ bundle
+  ```js
+  //= require react_router
+  ```
+  
+  Or in `app/assets/javascripts/application.js.coffee`:
+  
+  ```coffeescript
+  #= require react_router
+  ```
 
-Or install it yourself as:
+## Acknowledgements
 
-    $ gem install react-router-rails
+[React Router](https://github.com/rackt/react-router/) licensed under the [MIT license](https://github.com/rackt/react-router/blob/master/LICENSE)
 
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/react-router-rails/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Copyright [Mario Peixoto](https://github.com/mariopeixoto), released under the [MIT license](https://github.com/mariopeixoto/react-router-rails/LICENSE).
