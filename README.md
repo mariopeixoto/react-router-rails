@@ -50,6 +50,6 @@
 
 ## Acknowledgements
 
-[React Router](https://github.com/rackt/react-router/) licensed under the [MIT license](https://github.com/rackt/react-router/blob/master/LICENSE)
+[React Router](https://github.com/rackt/react-router/) by Ryan Florence, Michael Jackson licensed under the [MIT license](https://github.com/rackt/react-router/blob/master/LICENSE)
 
 Copyright [Mario Peixoto](https://github.com/mariopeixoto), released under the [MIT license](https://github.com/mariopeixoto/react-router-rails/LICENSE).
