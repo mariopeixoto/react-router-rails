@@ -32,13 +32,15 @@
   #= require react_router.min
   ```
 
-3. Using React Router:
+3. Using React Router in your javascript:
 
   ```js
   ReactRouter.run(routes, function (Handler) {
     React.render(<Handler/>, document.body);
   });
   ```
+
+  Or in coffeescript:
 
   ```coffeescript
   ReactRouter.run(routes, (Handler) ->
