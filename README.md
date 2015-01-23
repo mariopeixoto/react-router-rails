@@ -4,14 +4,14 @@
 
 [React Router](https://github.com/rackt/react-router/) for Rails asset pipeline
 
-- React Router version: [0.11.6](https://github.com/rackt/react-router/tree/v0.11.6)
+- React Router version: [0.11.6.1](https://github.com/rackt/react-router/tree/v0.11.6.1)
 
 ## Installation
 
 1. Add to your `Gemfile` and install with bundler:
 
   ```ruby
-  gem 'react-router-rails', '~>0.11.6'
+  gem 'react-router-rails', '~>0.11.6.1'
   ```
   
   ```bash
