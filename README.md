@@ -4,7 +4,7 @@
 
 [React Router](https://github.com/rackt/react-router/) for Rails asset pipeline
 
-- React Router version: [0.11.6.1](https://github.com/rackt/react-router/tree/v0.11.6.1)
+- React Router version: [0.11.6](https://github.com/rackt/react-router/tree/v0.11.6)
 
 ## Installation
 
