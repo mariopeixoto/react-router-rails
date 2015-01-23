@@ -78,6 +78,16 @@
   )
   ```
 
+## Roadmap
+
+1. Better handle of production version
+  
+  Instead of explicit require minified version, we should make it possible to configure that in the environment config files like the react-rails configuration (ex. config.react_router_variant = :production)
+
+2. Serverside rendering
+
+  Use the ReactRouter.run + React.renderToString method to render the markup on the server.
+
 ## Acknowledgements
 
 This gem is highly inspired and based on [React Rails](https://github.com/reactjs/react-rails) code. Thanks!
