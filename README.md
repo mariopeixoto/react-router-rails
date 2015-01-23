@@ -43,9 +43,10 @@
   ```coffeescript
   Route = ReactRouter.Route
 
-  @AppRoutes = (
+  @MyRoutes = (
     <Route handler={App}>
       <Route name='home' handler={Home} path='/' />
+      ...
     </Route>
   )
   ```
