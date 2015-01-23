@@ -40,10 +40,10 @@
 
   Define your routes 'MyRoutes' in any javascript file like you would normally do:
 
-  ```coffeescript
-  Route = ReactRouter.Route
+  ```js
+  var Route = ReactRouter.Route
 
-  @MyRoutes = (
+  this.MyRoutes = (
     <Route handler={App}>
       <Route name='home' handler={Home} path='/' />
       ...
