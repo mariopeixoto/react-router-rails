@@ -32,9 +32,37 @@
   #= require react_router
   #OR
   #= require react_router.min
+
+  #Optional. Gives you the ability to use the view helper in your template
+  #= require react_router_ujs
+  ```
+3. Using the view helper:
+
+  Define your routes 'MyRoutes' in any javascript file like you would normally do:
+
+  ```coffeescript
+  Route = ReactRouter.Route
+
+  @AppRoutes = (
+    <Route handler={App}>
+      <Route name='home' handler={Home} path='/' />
+    </Route>
+  )
   ```
 
-3. Using React Router in your javascript:
+  In the view helper set the name of your routes component
+
+  ```erb
+  <%= react_router 'MyRoutes' %>
+  ```
+
+  Optionally set the location handler (defaults to HashLocation):
+
+  ```erb
+  <%= react_router 'MyRoutes', 'HistoryLocation' %>
+  ```
+
+4. Using React Router in your javascript :
 
   ```js
   ReactRouter.run(routes, function (Handler) {
@@ -51,6 +79,8 @@
   ```
 
 ## Acknowledgements
+
+This gem is highly inspired and based on [React Rails](https://github.com/reactjs/react-rails) code. Thanks!
 
 [React Router](https://github.com/rackt/react-router/) by [Ryan Florence](https://github.com/rpflorence), [Michael Jackson](https://github.com/mjackson) licensed under the [MIT license](https://github.com/rackt/react-router/blob/master/LICENSE)
 
