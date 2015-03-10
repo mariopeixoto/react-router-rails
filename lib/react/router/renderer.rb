@@ -37,9 +37,6 @@ module React
       end
 
       def context
-        File.open(::Rails.root.join('tmp/react_router_context.js'), 'w') do |f|
-          f.print self.class.combined_js
-        end
         @context ||= ExecJS.compile(self.class.combined_js)
       end
 
