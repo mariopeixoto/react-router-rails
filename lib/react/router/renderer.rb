@@ -45,7 +45,7 @@ module React
         jscode = <<-JS
           function() {
             var str = '';
-            ReactRouter.run(#{routes}, '#{location}', function (Handler) {
+            ReactRouter.run(#{routes}, #{location.to_json}, function (Handler) {
               str = React.renderToString(React.createElement(Handler, #{react_props}));
             });
             return str;
