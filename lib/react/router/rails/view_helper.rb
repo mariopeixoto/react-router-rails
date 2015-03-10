@@ -4,7 +4,12 @@ module React
       module ViewHelper
         def react_router(routes, location = 'HashLocation', args = {}, options = {}, &block)
           options = {:tag => options} if options.is_a?(Symbol)
-          block = Proc.new{concat React::Router::Renderer.render(routes, options[:prerender_location], args)} if options[:prerender]
+          if options[:prerender]
+            fail "Server rendering doesn't work with HashLocation" if location == 'HashLocation'
+            block = Proc.new do
+              concat React::Router::Renderer.render(routes, options[:prerender_location], args)
+            end
+          end
 
           html_options = options.reverse_merge(:data => {})
           html_options[:data].tap do |data|
