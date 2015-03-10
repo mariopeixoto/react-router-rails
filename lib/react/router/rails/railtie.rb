@@ -13,7 +13,7 @@ module React
         config.react_router.route_filenames = ['routes.js']
 
         # Include the react-router-rails view helper lazily
-        initializer "react_router_rails.setup_view_helpers" do |app|
+        initializer "react_router_rails.setup_view_helpers", group: :all do |app|
           ActiveSupport.on_load(:action_view) do
             include ::React::Router::Rails::ViewHelper
           end
