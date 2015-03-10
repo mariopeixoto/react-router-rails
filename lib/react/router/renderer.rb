@@ -49,7 +49,7 @@ module React
           function() {
             var str = '';
             ReactRouter.run(#{routes}, '#{location}', function (Handler) {
-              str = React.renderToString(React.createElement(Handler, {}));
+              str = React.renderToString(React.createElement(Handler, #{react_props}));
             });
             return str;
           }()
