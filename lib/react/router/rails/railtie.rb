@@ -5,12 +5,12 @@ module React
     module Rails
       class Railtie < ::Rails::Railtie
         config.react_router = ActiveSupport::OrderedOptions.new
-        
+
         config.react_router.max_renderers = 10
         config.react_router.timeout = 20 # seconds
         config.react_router.react_js = lambda { File.read(::Rails.application.assets.resolve('react.js')) }
         config.react_router.react_router_js = lambda { File.read(::Rails.application.assets.resolve('react_router.js')) }
-        config.react_router.route_filenames = ['routes.js']
+        config.react_router.route_filenames = ['components.js']
 
         # Include the react-router-rails view helper lazily
         initializer "react_router_rails.setup_view_helpers", group: :all do |app|
@@ -18,7 +18,7 @@ module React
             include ::React::Router::Rails::ViewHelper
           end
         end
-        
+
         config.after_initialize do |app|
           app.config.react_router.routes_js = lambda {
             app.config.react_router.route_filenames.map do |filename|
