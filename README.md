@@ -13,7 +13,7 @@
   ```ruby
   gem 'react-router-rails', '~>0.11.6.1'
   ```
-  
+
   ```bash
   bundle install
   ```
@@ -24,10 +24,13 @@
   //= require react_router
   // OR
   //= require react_router.min
+
+  //Optional. Gives you the ability to use the view helper in your template
+  //= require react_router_ujs
   ```
-  
+
   Or in `app/assets/javascripts/application.js.coffee`:
-  
+
   ```coffeescript
   #= require react_router
   #OR
@@ -38,17 +41,17 @@
   ```
 3. Using the view helper:
 
-  Define your routes 'MyRoutes' in any javascript file like you would normally do:
+  Define your routes 'MyRoutes' in any your react components folder like you would normally do:
 
   ```js
-  var Route = ReactRouter.Route
+  var Route = ReactRouter.Route;
 
   this.MyRoutes = (
     <Route handler={App}>
       <Route name='home' handler={Home} path='/' />
       ...
     </Route>
-  )
+  );
   ```
 
   In the view helper set the name of your routes component
@@ -66,7 +69,8 @@
   If you use server rendering:
 
   ```erb
-  <%= react_router 'MyRoutes', 'HistoryLocation', {}, { prerender_location: path } %>
+  <%= react_router 'MyRoutes', 'HistoryLocation', {}, { prerender_location: path_to_route } %>
+  ```
 
 4. Using React Router in your javascript :
 
@@ -87,12 +91,14 @@
 ## Roadmap
 
 1. Better handle of production version
-  
+
   Instead of explicit require minified version, we should make it possible to configure that in the environment config files like the react-rails configuration (ex. config.react_router_variant = :production)
 
 ## Acknowledgements
 
 This gem is highly inspired and based on [React Rails](https://github.com/reactjs/react-rails) code. Thanks!
+
+A big thanks to [@troter](https://github.com/rpflorence) who implemented the server-side rendering engine for this gem.
 
 [React Router](https://github.com/rackt/react-router/) by [Ryan Florence](https://github.com/rpflorence), [Michael Jackson](https://github.com/mjackson) licensed under the [MIT license](https://github.com/rackt/react-router/blob/master/LICENSE)
 
