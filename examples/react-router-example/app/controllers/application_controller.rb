@@ -5,6 +5,5 @@ class ApplicationController < ActionController::Base
 
   def index
     @location_path = "/#{params[:path]}"
-    p @location_path
   end
 end
