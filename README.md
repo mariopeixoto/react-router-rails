@@ -98,7 +98,7 @@
 
 This gem is highly inspired and based on [React Rails](https://github.com/reactjs/react-rails) code. Thanks!
 
-A big thanks to [@troter](https://github.com/rpflorence) who implemented the server-side rendering engine for this gem.
+A big thanks to [@troter](https://github.com/troter) who implemented the server-side rendering engine for this gem.
 
 [React Router](https://github.com/rackt/react-router/) by [Ryan Florence](https://github.com/rpflorence), [Michael Jackson](https://github.com/mjackson) licensed under the [MIT license](https://github.com/rackt/react-router/blob/master/LICENSE)
 
