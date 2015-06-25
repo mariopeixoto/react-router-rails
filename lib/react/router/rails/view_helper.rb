@@ -15,11 +15,12 @@ module React
           html_options[:data].tap do |data|
             data[:'react-router-class'] = routes
             data[:'react-router-location'] = location
+            data[:'react-router-data'] = args.to_json
           end
           html_tag = html_options[:tag] || :div
 
           html_options.except!(:tag, :prerender_location)
-          
+
           content_tag(html_tag, '', html_options, &block)
         end
       end
