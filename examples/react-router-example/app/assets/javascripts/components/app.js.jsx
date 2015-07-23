@@ -17,7 +17,7 @@ var App = React.createClass({
             </li>
           </ul>
         </nav>
-        <RouteHandler />
+        <RouteHandler {...this.props}/>
       </div>
     );
   }
