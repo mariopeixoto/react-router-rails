@@ -11,7 +11,7 @@
 1. Add to your `Gemfile` and install with bundler:
 
   ```ruby
-  gem 'react-router-rails', '~>0.13.3'
+  gem 'react-router-rails', '~>0.13.3p1'
   ```
 
   ```bash
