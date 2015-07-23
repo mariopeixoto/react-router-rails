@@ -39,4 +39,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'react-rails', '~> 1.0'
-gem 'react-router-rails', '0.13.3'
+gem 'react-router-rails', '0.13.3p1'
