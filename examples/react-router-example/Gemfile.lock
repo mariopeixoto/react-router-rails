@@ -105,7 +105,7 @@ GEM
       execjs
       rails (>= 3.1)
       react-source (~> 0.13)
-    react-router-rails (0.13.3p1)
+    react-router-rails (0.13.3.1)
       rails (>= 3.1)
       react-rails (>= 0.12)
     react-source (0.13.3)
@@ -149,7 +149,7 @@ DEPENDENCIES
   jquery-rails
   rails (= 4.2.1)
   react-rails (~> 1.0)
-  react-router-rails (= 0.13.3p1)
+  react-router-rails (= 0.13.3.1)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
