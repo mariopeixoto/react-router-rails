@@ -41,7 +41,7 @@
   ```
 3. Using the view helper:
 
-  Define your routes 'MyRoutes' in any your react components folder like you would normally do:
+  Define your routes 'MyRoutes' in your react components folder, like you would normally do:
 
   ```js
   var Route = ReactRouter.Route;
