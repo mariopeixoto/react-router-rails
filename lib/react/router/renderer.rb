@@ -12,8 +12,9 @@ module React
 
       cattr_accessor :pool
 
-      def self.setup!(react_js, react_router_js, routes_js, args={})
+      def self.setup!(react_js, react_server_js, react_router_js, routes_js, args={})
         @@react_js = react_js
+        @@react_server_js = react_server_js
         @@react_router_js = react_router_js
         @@routes_js = routes_js
         @@pool.shutdown {} if @@pool
@@ -46,7 +47,7 @@ module React
           function() {
             var str = '';
             ReactRouter.run(#{routes}, #{location.to_json}, function (Handler) {
-              str = React.renderToString(React.createElement(Handler, #{react_props}));
+              str = ReactDOMServer.renderToString(React.createElement(Handler, #{react_props}));
             });
             return str;
           }()
@@ -76,6 +77,8 @@ module React
 
           #{@@react_js.call};
           React = global.React;
+          #{@@react_server_js.call};
+          ReactDOMServer = global.ReactDOMServer;
           #{@@react_router_js.call}
           ReactRouter = global.ReactRouter;
           #{@@routes_js.call};
