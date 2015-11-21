@@ -76,7 +76,7 @@
 
   ```js
   ReactRouter.run(routes, function (Handler) {
-    React.render(<Handler/>, document.body);
+    ReactDOM.render(<Handler/>, document.body);
   });
   ```
 
@@ -84,7 +84,7 @@
 
   ```coffeescript
   ReactRouter.run(routes, (Handler) ->
-    React.render <Handler/>, document.body
+    ReactDOM.render <Handler/>, document.body
   )
   ```
 
