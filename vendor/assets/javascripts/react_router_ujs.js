@@ -1,6 +1,6 @@
 // Unobtrusive scripting adapter for React Router based on react-rails gem.
 // https://github.com/reactjs/react-rails/blob/master/lib/assets/javascripts/react_ujs.js
-(function(document, window, React, ReactRouter) {
+(function(document, window, React, ReactDOM, ReactRouter) {
   var ROUTER_CLASS_NAME = 'data-react-router-class';
   var LOCATION_CLASS_NAME = 'data-react-router-location';
   var DATA_CLASS_NAME = 'data-react-router-data';
@@ -37,7 +37,7 @@
       var data = JSON.parse(dataJson);
 
       ReactRouter.run(routes, location, function (Handler) {
-        React.render(React.createElement(Handler, data), routerNode);
+        ReactDOM.render(React.createElement(Handler, data), routerNode);
       });
     }
   };
@@ -70,4 +70,4 @@
     handleNativeEvents();
   }
 
-})(document, window, React, ReactRouter);
+})(document, window, React, ReactDOM, ReactRouter);

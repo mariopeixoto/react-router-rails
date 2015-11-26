@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 var AnotherPage = React.createClass({
   render: function() {
     return (
