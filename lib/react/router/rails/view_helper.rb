@@ -22,7 +22,7 @@ module React
             if separate_props
               data[:react_props_id] = add_react_props args, move_separate_props_out
             else
-              data[:react_props] = React::Renderer.react_props args
+              data[:react_props] = React::Router::Renderer.react_props args
             end
           end
           html_tag = html_options[:tag] || :div
