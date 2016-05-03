@@ -78,7 +78,7 @@
     #= require components 
     ```
 
-5. Using React Router in your javascript :
+5. Using React Router in your javascript:
 
   ```js
   ReactRouter.run(routes, function (Handler) {
