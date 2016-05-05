@@ -3,6 +3,7 @@
 (function(document, window, React, ReactDOM, ReactRouter) {
   var ROUTER_CLASS_NAME = 'data-react-router-class';
   var LOCATION_CLASS_NAME = 'data-react-router-location';
+  var PROPS_ID_ATTR = 'data-react-props-id';
   var DATA_CLASS_NAME = 'data-react-router-data';
 
   // jQuery is optional. Use it to support legacy browsers.
@@ -18,6 +19,7 @@
   };
 
   var mountReactRouter = function() {
+    var propsId, propsElement, propsJson;
     var nodes = findReactRouterDOMNodes();
     if (nodes.length >= 1) {
       if (nodes.length > 1) {
@@ -33,11 +35,18 @@
       var locationName = routerNode.getAttribute(LOCATION_CLASS_NAME);
       var location = ReactRouter[locationName] ;
 
-      var dataJson = routerNode.getAttribute(DATA_CLASS_NAME);
-      var data = JSON.parse(dataJson);
+      var propsId = routerNode.getAttribute(PROPS_ID_ATTR);
+      if (propsId != null) {
+          propsElement = document.getElementById(propsId);
+          propsJson = propsElement && propsElement.text;
+      } else {
+          propsJson = routerNode.getAttribute(PROPS_ATTR);
+      }
+
+      var props = propsJson && JSON.parse(propsJson);
 
       ReactRouter.run(routes, location, function (Handler) {
-        ReactDOM.render(React.createElement(Handler, data), routerNode);
+        ReactDOM.render(React.createElement(Handler, props), routerNode);
       });
     }
   };
