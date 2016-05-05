@@ -38,5 +38,6 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'react-rails', '~> 1.0'
-gem 'react-router-rails', '0.13.3'
+gem "react-rails", "~> 1.4.0"
+# Using a relative path to use the local gem code in the example app
+gem 'react-router-rails', path: "../../"

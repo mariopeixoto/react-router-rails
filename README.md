@@ -11,7 +11,7 @@
 1. Add to your `Gemfile` and install with bundler:
 
   ```ruby
-  gem 'react-router-rails', '~>0.13.3'
+  gem 'react-router-rails', '~>0.13.3.2'
   ```
 
   ```bash
@@ -41,7 +41,7 @@
   ```
 3. Using the view helper:
 
-  Define your routes 'MyRoutes' in any your react components folder like you would normally do:
+  Define your routes 'MyRoutes' in your react components folder, like you would normally do:
 
   ```js
   var Route = ReactRouter.Route;
@@ -71,12 +71,17 @@
   ```erb
   <%= react_router 'MyRoutes', 'HistoryLocation', {}, { prerender_location: path_to_route } %>
   ```
+4. Require your components folder AFTER your react_router:
 
-4. Using React Router in your javascript :
+   ```coffeescript
+    #= require react_router
+    #= require components
+
+5. Using React Router in your javascript :
 
   ```js
   ReactRouter.run(routes, function (Handler) {
-    React.render(<Handler/>, document.body);
+    ReactDOM.render(<Handler/>, document.body);
   });
   ```
 
@@ -84,7 +89,7 @@
 
   ```coffeescript
   ReactRouter.run(routes, (Handler) ->
-    React.render <Handler/>, document.body
+    ReactDOM.render <Handler/>, document.body
   )
   ```
 

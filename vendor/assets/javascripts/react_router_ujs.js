@@ -1,9 +1,10 @@
 // Unobtrusive scripting adapter for React Router based on react-rails gem.
 // https://github.com/reactjs/react-rails/blob/master/lib/assets/javascripts/react_ujs.js
-(function(document, window, React, ReactRouter) {
+(function(document, window, React, ReactDOM, ReactRouter) {
   var ROUTER_CLASS_NAME = 'data-react-router-class';
   var LOCATION_CLASS_NAME = 'data-react-router-location';
   var PROPS_ID_ATTR = 'data-react-props-id';
+  var DATA_CLASS_NAME = 'data-react-router-data';
 
   // jQuery is optional. Use it to support legacy browsers.
   var $ = (typeof jQuery !== 'undefined') && jQuery;
@@ -45,7 +46,7 @@
       var props = propsJson && JSON.parse(propsJson);
 
       ReactRouter.run(routes, location, function (Handler) {
-        React.render(React.createElement(Handler, props), routerNode);
+        ReactDOM.render(React.createElement(Handler, props), routerNode);
       });
     }
   };
@@ -55,11 +56,11 @@
     if ($) {
       handleEvent = function(eventName, callback) {
         $(document).on(eventName, callback);
-      }
+      };
     } else {
       handleEvent = function(eventName, callback) {
         document.addEventListener(eventName, callback);
-      }
+      };
     }
     handleEvent('page:change', mountReactRouter);
   };
@@ -78,5 +79,4 @@
     handleNativeEvents();
   }
 
-})(document, window, React, ReactRouter);
-
+})(document, window, React, ReactDOM, ReactRouter);

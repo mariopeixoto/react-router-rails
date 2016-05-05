@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 var RouteHandler = ReactRouter.RouteHandler,
     Link = ReactRouter.Link;
 
@@ -17,7 +15,7 @@ var App = React.createClass({
             </li>
           </ul>
         </nav>
-        <RouteHandler />
+        <RouteHandler {...this.props}/>
       </div>
     );
   }

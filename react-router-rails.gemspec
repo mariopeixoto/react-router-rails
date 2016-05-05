@@ -20,5 +20,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
 
   spec.add_dependency 'rails', '>= 3.1'
-  spec.add_dependency 'react-rails', '>= 0.12'
+  spec.add_dependency 'react-rails', '~> 1.5'
 end
