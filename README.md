@@ -76,7 +76,8 @@
    ```coffeescript
     #= require react_router
     #= require components
-
+  ```
+  
 5. Using React Router in your javascript :
 
   ```js
