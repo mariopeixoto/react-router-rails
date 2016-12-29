@@ -73,8 +73,14 @@ Important: This gem is not maintained anymore, and it's only compatible up to Ra
   ```erb
   <%= react_router 'MyRoutes', 'HistoryLocation', {}, { prerender_location: path_to_route } %>
   ```
+4. Require your components folder AFTER your react_router:
 
-4. Using React Router in your javascript :
+   ```coffeescript
+    #= require react_router
+    #= require components
+  ```
+  
+5. Using React Router in your javascript :
 
   ```js
   ReactRouter.run(routes, function (Handler) {
