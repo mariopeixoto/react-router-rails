@@ -1,3 +1,5 @@
+Important: This gem is not maintained anymore, and it's only compatible up to Rails 4.
+
 # react-router-rails
 
 [![Gem Version](https://badge.fury.io/rb/react-router-rails.svg)](https://badge.fury.io/rb/react-router-rails.svg)
