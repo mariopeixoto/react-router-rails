@@ -35,7 +35,9 @@ module React
 
           do_setup.call
 
-          ActionDispatch::Reloader.to_prepare(&do_setup)
+          reloader = defined?(ActiveSupport::Reloader) ? ActiveSupport::Reloader : ActionDispatch::Reloader
+
+          reloader.to_prepare(&do_setup)
         end
       end
     end
